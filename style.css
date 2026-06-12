@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Jost',sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:url('./images/cover.jpg') center/cover no-repeat;
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+.todo-app{
+    width:100%;
+    max-width:600px;
+    padding:30px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+.todo-app h1{
+    text-align:center;
+    color:white;
+    margin-bottom:25px;
+}
+
+.stat-container{
+    padding:15px 20px;
+    border-radius:10px;
+    border:2px solid rgba(255,255,255,0.18);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    width:100%;
+}
+
+.details{
+    width:100%;
+}
+
+.details h3{
+    color:#fff;
+}
+
+#progressbar{
+    width:100%;
+    height:7px;
+    background:rgba(255,194,209,0.3);
+    border-radius:20px;
+    position:relative;
+    margin-top:15px;
+}
+
+#progress{
+    width:50%;
+    height:100%;
+    background:#ff6f91;
+    border-radius:20px;
+    transition:width 0.3s ease;
+}
+
+#numbers{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:80px;
+    height:80px;
+    background:#ff6f91;
+    border:2px solid rgba(255,194,209,0.3);
+    font-weight:bold;
+    border-radius:50%;
+    font-size:1.5rem;
+    color:#fff;
+}
+
+.input-area{
+    display:flex;
+    gap:10px;
+    margin-bottom:25px;
+    margin-top:20px;
+}
+
+.input-area input{
+    flex:1;
+    padding:15px 20px;
+    border:none;
+    outline:none;
+    border-radius:30px;
+    background:rgba(255,255,255,0.15);
+    color:white;
+    font-size:1rem;
+}
+
+.input-area input::placeholder{
+    color:white;
+}
+
+.input-area button{
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#ff6f91;
+    color:white;
+    font-size:1.2rem;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.input-area button:hover{
+    transform:scale(1.1);
+}
+
+#task-list{
+    list-style:none;
+}
+
+#task-list li{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px 20px;
+    margin-bottom:15px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.15);
+}
+
+#task-list li.completed span{
+    text-decoration:line-through;
+    opacity:0.6;
+}
+
+.checkbox{
+    width:24px;
+    height:24px;
+    accent-color:#ff6f91;
+}
+
+.task-text{
+    flex:1;
+    color:white;
+    font-size:1.1rem;
+}
+
+.completed .task-text{
+    text-decoration:line-through;
+    opacity:.6;
+}
+
+.task-buttons{
+    display:flex;
+    gap:10px;
+    margin-left:auto;
+}
+
+.edit-btn,
+.delete-btn{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    color:white;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.edit-btn:hover,
+.delete-btn:hover{
+    transform:scale(1.1);
+}
+
+.edit-btn{
+    background:#ffc107;
+}
+
+.delete-btn{
+    background:#ff6f91;
+}
+.empty-image{
+    width:120px;
+    height:auto;
+    display:block;
+    margin:20px auto;
+}
+
+@media (max-width:600px){
+
+    .container{
+        margin:0 20px;
+        padding:0 10px;
+    }
+
+    .todo-app{
+        padding:1.5rem;
+    }
+
+    #numbers{
+        width:60px;
+        height:60px;
+        font-size:1rem;
+    }
+
+    .input-area input{
+        font-size:1rem;
+    }
+
+    .details h3{
+        font-size:1rem;
+    }
+
+    .edit-btn,
+    .delete-btn{
+        width:35px;
+        height:35px;
+    }
+}
